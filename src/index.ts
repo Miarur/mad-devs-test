@@ -71,5 +71,3 @@ const options = {
 };
 
 new Slider(options);
-// slider.setOptions(options2)
-// console.log(slider)
