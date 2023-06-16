@@ -2,7 +2,7 @@
 
 ### Clone repo 
 ```bash
-https://github.com/Miarur/mad-devs-test.git
+git clone https://github.com/Miarur/mad-devs-test.git
 ```
 
 ### Go to folder
