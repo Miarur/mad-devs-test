@@ -1,8 +1,21 @@
 import '../src/style.scss';
-import { Slider }  from './Slider';
+import { SliderOptions } from './types/slider';
+import Slider  from './Slider';
+
+const defaultSliderOptions: SliderOptions = {
+  delay: 1000,
+  root: "#slider",
+  width: 650,
+  height: 650,
+  slides: [
+    { color: "red", text: "Slide 1" },
+    { color: "blue", text: "Slide 2" },
+    { color: "green", text: "Slide 3" },
+  ],
+};
 
 const options = {
-  delay: 1500,
+  delay: 1000,
   root: "#slider",
   width: 750,
   height: 500,
@@ -70,4 +83,21 @@ const options = {
   ]
 };
 
-new Slider(options);
+const options2: SliderOptions = {
+  delay: 100,
+  root: "#slidero",
+  width: 750,
+  height: 750,
+  slides: [
+    { color: "red", text: "Slide 1" },
+    { color: "blue", text: "Slide 2" },
+    { color: "green", text: "Slide 3" },
+    { color: "red", text: "Slide 1" },
+    { color: "blue", text: "Slide 2" },
+    { color: "green", text: "Slide 3" },
+  ],
+};
+
+const mergedOptions: SliderOptions = { ...defaultSliderOptions, ...options };
+
+const slider = new Slider(mergedOptions);

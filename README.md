@@ -24,3 +24,10 @@ npm run dev
 ```bash
 npm run build
 ```
+
+### Run tests 
+```bash
+cd src/spec
+
+npx jest
+```
